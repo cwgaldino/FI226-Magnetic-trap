@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Calculate the magnetic field from a arbitrary current loop."""
+"""Calculate the magnetic field from a arbitrary current loop  and a anti-helmholtz coil."""
 
 import numpy as np
 from scipy.special import ellipk, ellipe
@@ -89,7 +89,7 @@ def field_anti_helmholtz(coil_turns, R, D, I, r):
 
     First coil is in the position [0, 0, D] and its normal vector n points in
     the +z direction.
-    The current direction follows the right hand-rule regarding the normal
+    The current I direction follows the right hand-rule regarding the normal
     vector.
 
     :param coil_turns: number of turns in the coil.
@@ -98,7 +98,7 @@ def field_anti_helmholtz(coil_turns, R, D, I, r):
     :param I: electric current in A.
     :param r: position vector r in the space to evaluate B field
 
-    :return: vector representing B field in position r.
+    :return: vector representing B field in position r (in Tesla).
 
     """
 

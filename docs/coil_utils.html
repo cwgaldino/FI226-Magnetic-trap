@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>coil_utils module &#8212; FI226: Magnetic trap 1.0 documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="coilSimulation_exact module" href="coilSimulation_exact.html" />
+    <link rel="prev" title="FI226: Magnetic trap" href="index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="coilSimulation_exact.html" title="coilSimulation_exact module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="FI226: Magnetic trap"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">FI226: Magnetic trap 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-coil_utils">
+<span id="coil-utils-module"></span><h1>coil_utils module<a class="headerlink" href="#module-coil_utils" title="Permalink to this headline">¶</a></h1>
+<p>Calculate the magnetic field from a arbitrary current loop  and a anti-helmholtz coil.</p>
+<dl class="function">
+<dt id="coil_utils.field_anti_helmholtz">
+<code class="sig-prename descclassname">coil_utils.</code><code class="sig-name descname">field_anti_helmholtz</code><span class="sig-paren">(</span><em class="sig-param">coil_turns</em>, <em class="sig-param">R</em>, <em class="sig-param">D</em>, <em class="sig-param">I</em>, <em class="sig-param">r</em><span class="sig-paren">)</span><a class="headerlink" href="#coil_utils.field_anti_helmholtz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate field inside anti-helmholtz coils.</p>
+<p>Their normal vector points in the z direction.</p>
+<p>First coil is in the position [0, 0, D] and its normal vector n points in
+the +z direction.
+The current I direction follows the right hand-rule regarding the normal
+vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>coil_turns</strong> – number of turns in the coil.</p></li>
+<li><p><strong>R</strong> – coil radius in m.</p></li>
+<li><p><strong>D</strong> – distance between the coordinate system and the coils in m.</p></li>
+<li><p><strong>I</strong> – electric current in A.</p></li>
+<li><p><strong>r</strong> – position vector r in the space to evaluate B field</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>vector representing B field in position r (in Tesla).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="coil_utils.field_loop">
+<code class="sig-prename descclassname">coil_utils.</code><code class="sig-name descname">field_loop</code><span class="sig-paren">(</span><em class="sig-param">r</em>, <em class="sig-param">r0</em>, <em class="sig-param">n</em>, <em class="sig-param">R</em>, <em class="sig-param">I</em><span class="sig-paren">)</span><a class="headerlink" href="#coil_utils.field_loop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the magnetic field from an arbitrary current loop.</p>
+<p>See eqns (1) and (2) in Phys Rev A Vol. 35, N 4, pp. 1535-1546; 1987.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>r</strong> (<em>list</em><em> [</em><em>x y z</em><em>]</em>) – <dl class="simple">
+<dt>Position vector where the magnetc field is to be evaluated,</dt><dd><p>where x, y, z in meters.</p>
+</dd>
+</dl>
+</p></li>
+<li><p><strong>r0</strong> (<em>list</em><em> [</em><em>x y z</em><em>]</em>) – Position vector of the loop center, where x, y, z in meters.</p></li>
+<li><p><strong>n</strong> (<em>list</em><em> [</em><em>x y z</em><em>]</em>) – Normal vector of loop plane at its center.
+Current I is oriented by the right-hand-rule.</p></li>
+<li><p><strong>R</strong> (<em>float</em>) – Radius of the loop in meters.</p></li>
+<li><p><strong>I</strong> (<em>float</em>) – Electrical current in A.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Magnetic field vector at point r in Tesla.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>numpy array [x y z]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">FI226: Magnetic trap</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="coilSimulation_exact.html"
+                        title="next chapter">coilSimulation_exact module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/coil_utils.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="coilSimulation_exact.html" title="coilSimulation_exact module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="FI226: Magnetic trap"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">FI226: Magnetic trap 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2019, Carlos Galdino, Vladimir Gaal, Rodolfo Tartaglia, Regis, Marlos, Thiago.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+    </div>
+  </body>
+</html>
