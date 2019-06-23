@@ -1,5 +1,5 @@
 .. FI: Magnetic trap documentation master file, created by
-   sphinx-quickstart on Sun Jun 23 12:26:14 2019.
+   sphinx-quickstart on Sun Jun 23 12:56:02 2019.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
