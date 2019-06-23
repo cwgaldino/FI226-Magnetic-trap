@@ -33,7 +33,20 @@ Fig 1.
 
 Fig 2.
 
+Figures 3 and 4 shows the simulated results of a anti-helmholtz coil together
+with measured data using a gaussimeter. The coils had 150 turns and R=2.5 cm,
+D=2.45 cm, I=1 A. The default values of coilSimulation_exact.py and
+coilSimulation_real.py reproduce these results.
 
+.. image:: ../../docs/figures/Bz.svg
+  :height: 300px
+
+Fig 3.
+
+.. image:: ../../docs/figures/dBz.svg
+  :height: 300px
+
+Fig 4.
 
 
 
