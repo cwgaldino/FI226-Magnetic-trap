@@ -18,8 +18,8 @@ sys.path.insert(0, os.path.abspath('../../'))
 # -- Project information -----------------------------------------------------
 
 project = 'FI226: Magnetic trap'
-copyright = '2019, Carlos Galdino, Vladimir Gaal, Rodolfo Tartaglia, Regis, Marlos, Thiago'
-author = 'Carlos Galdino, Vladimir Gaal, Rodolfo Tartaglia, Regis, Marlos, Thiago'
+copyright = '2019, Carlos Galdino, Vladimir Gaal, Rodolfo Tartaglia, Regis schiavon, Marlon saveri, Thiago Cabral'
+author = 'Carlos Galdino, Vladimir Gaal, Rodolfo Tartaglia, Regis schiavon, Marlon saveri, Thiago Cabral'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0'
