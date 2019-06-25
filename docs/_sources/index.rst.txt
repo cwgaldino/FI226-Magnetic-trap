@@ -43,17 +43,41 @@ coilSimulation_real.py reproduce these results.
 
 Fig 3.
 
-.. image:: ../../docs/figures/dBz.svg
+.. image:: ../../docs/figures/dBz_raw.svg
   :height: 300px
 
 Fig 4.
 
 
+The derivative of measured data does not seem really good due to the small number of measured points.
+To correct that we may artificially increase the number of measured by. Two methods are presented. The
+script /data/comparisson.py reproduce the results below.
+
+1) To interpolate the data, then average each 100 point to smooth the curve:
+
+.. image:: ../../docs/figures/Bz_interp.svg
+  :height: 300px
+
+Fig 5.
+
+.. image:: ../../docs/figures/dBz_interp.svg
+  :height: 300px
+
+Fig 6.
 
 
 
+2) Fitting the data using a 5 order polynomial.
 
+.. image:: ../../docs/figures/Bz_fit.svg
+  :height: 300px
 
+Fig 7.
+
+.. image:: ../../docs/figures/dBz_fit.svg
+  :height: 300px
+
+Fig 8.
 
 .. Indices and tables
 .. ==================

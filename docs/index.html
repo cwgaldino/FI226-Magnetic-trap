@@ -65,8 +65,25 @@ D=2.45 cm, I=1 A. The default values of coilSimulation_exact.py and
 coilSimulation_real.py reproduce these results.</p>
 <a class="reference internal image-reference" href="_images/Bz.svg"><img alt="_images/Bz.svg" height="300px" src="_images/Bz.svg" /></a>
 <p>Fig 3.</p>
-<a class="reference internal image-reference" href="_images/dBz.svg"><img alt="_images/dBz.svg" height="300px" src="_images/dBz.svg" /></a>
+<a class="reference internal image-reference" href="_images/dBz_raw.svg"><img alt="_images/dBz_raw.svg" height="300px" src="_images/dBz_raw.svg" /></a>
 <p>Fig 4.</p>
+<p>The derivative of measured data does not seem really good due to the small number of measured points.
+To correct that we may artificially increase the number of measured by. Two methods are presented. The
+script /data/comparisson.py reproduce the results below.</p>
+<ol class="arabic simple">
+<li><p>To interpolate the data, then average each 100 point to smooth the curve:</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/Bz_interp.svg"><img alt="_images/Bz_interp.svg" height="300px" src="_images/Bz_interp.svg" /></a>
+<p>Fig 5.</p>
+<a class="reference internal image-reference" href="_images/dBz_interp.svg"><img alt="_images/dBz_interp.svg" height="300px" src="_images/dBz_interp.svg" /></a>
+<p>Fig 6.</p>
+<ol class="arabic simple" start="2">
+<li><p>Fitting the data using a 5 order polynomial.</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/Bz_fit.svg"><img alt="_images/Bz_fit.svg" height="300px" src="_images/Bz_fit.svg" /></a>
+<p>Fig 7.</p>
+<a class="reference internal image-reference" href="_images/dBz_fit.svg"><img alt="_images/dBz_fit.svg" height="300px" src="_images/dBz_fit.svg" /></a>
+<p>Fig 8.</p>
 </div>
 
 
