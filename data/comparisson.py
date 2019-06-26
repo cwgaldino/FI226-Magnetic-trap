@@ -10,8 +10,6 @@ Created on Sun Jun 16 15:21:48 2019.
 from pathlib import Path
 import numpy as np
 import matplotlib.pyplot as plt
-import sys
-sys.path.append("/home/galdino/github/myModules")
 import filemanip as file
 from arraymanip import increasing_monotonicity
 
